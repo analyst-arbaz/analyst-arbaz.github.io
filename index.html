@@ -108,6 +108,21 @@ section{padding:100px 60px}
 .btn-resume{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);color:var(--text);padding:14px 28px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;margin-top:46px}
 .btn-resume:hover{border-color:var(--accent);color:var(--accent)}
 
+/* ACHIEVEMENTS */
+#achievements{background:var(--bg3)}
+.badge-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.badge-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;transition:all .3s;position:relative;overflow:hidden;display:block;text-decoration:none;color:inherit}
+.badge-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .3s}
+.badge-card:hover{border-color:rgba(79,142,247,.32);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.28)}
+.badge-card:hover::before{opacity:1}
+.badge-verify{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10.5px;color:var(--accent);margin-top:12px;letter-spacing:.04em;transition:gap .2s}
+.badge-card:hover .badge-verify{gap:8px}
+.badge-verify svg{width:10px;height:10px}
+.badge-icon{width:52px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px;background:#fff;border:1px solid var(--border)}
+.badge-title{font-size:14px;font-weight:600;margin-bottom:5px;line-height:1.4;color:var(--text)}
+.badge-issuer{font-size:12px;color:var(--accent);margin-bottom:10px}
+.badge-date{font-family:var(--mono);font-size:10.5px;color:var(--text3);letter-spacing:.04em}
+
 /* PROJECTS */
 #projects{background:var(--bg3)}
 /* Featured card */
@@ -183,6 +198,7 @@ footer a{color:var(--accent);text-decoration:none}
   section{padding:70px 22px}
   #home{padding:110px 22px 70px}
   .about-grid,.skills-grid,.contact-grid,.featured-project{grid-template-columns:1fr;gap:36px}
+  .badge-grid{grid-template-columns:1fr 1fr}
   .hero-stats{gap:26px}
   .projects-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr}
@@ -200,6 +216,7 @@ footer a{color:var(--accent);text-decoration:none}
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#resume">Resume</a></li>
+    <li><a href="#achievements">Achievements</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -405,6 +422,86 @@ footer a{color:var(--accent);text-decoration:none}
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     Download Full Resume (PDF)
   </a>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-label">Badge Wallet</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Achievements</h2>
+  <p class="section-sub">Certifications and skill badges earned from Google Cloud, Microsoft, and McKinsey.org — validating hands-on expertise in Generative AI and data analytics.</p>
+
+  <div class="badge-grid">
+    <a class="badge-card" href="https://www.credly.com/badges/fe42d9a7-4791-461e-8c8b-9b6c2d8b2146/public_url" target="_blank" rel="noopener">
+      <div class="badge-icon" style="background:#1a4fd6">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="badge-title">McKinsey.org Forward Program</div>
+      <div class="badge-issuer">McKinsey.org</div>
+      <div class="badge-date">Issued Jun 23, 2026</div>
+      <div class="badge-verify">Verify on Credly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a class="badge-card" href="https://www.credly.com/badges/216165d2-aff4-48a8-99e3-28ffc8c5b559/public_url" target="_blank" rel="noopener">
+      <div class="badge-icon">
+        <svg width="22" height="22" viewBox="0 0 23 23"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+      </div>
+      <div class="badge-title">AI Skills Fest 2026</div>
+      <div class="badge-issuer">Microsoft</div>
+      <div class="badge-date">Issued Jun 19, 2026</div>
+      <div class="badge-verify">Verify on Credly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a class="badge-card" href="https://www.credly.com/badges/c7ae23ff-cb52-4216-994a-d25d27abc35a/public_url" target="_blank" rel="noopener">
+      <div class="badge-icon">
+        <svg width="36" height="36" viewBox="0 0 100 100"><path fill="#EA4335" d="M17.23,27.06 A40,40 0 0 1 75.71,19.36 L64.78,32.38 A23,23 0 0 0 31.16,36.81 Z"/><path fill="#4285F4" d="M75.71,19.36 A40,40 0 0 1 51.40,89.98 L50.80,72.99 A23,23 0 0 0 64.78,32.38 Z"/><path fill="#34A853" d="M51.40,89.98 A40,40 0 0 1 35.02,87.09 L41.38,71.33 A23,23 0 0 0 50.80,72.99 Z"/><path fill="#FBBC05" d="M35.02,87.09 A40,40 0 0 1 17.23,27.06 L31.16,36.81 A23,23 0 0 0 41.38,71.33 Z"/><circle cx="27" cy="34" r="7" fill="#fff"/><circle cx="32" cy="50" r="15" fill="#fff"/><circle cx="50" cy="40" r="18" fill="#fff"/><circle cx="68" cy="50" r="15" fill="#fff"/><rect x="22" y="50" width="56" height="26" rx="13" fill="#fff"/></svg>
+      </div>
+      <div class="badge-title">Develop GenAI Apps with Gemini and Streamlit Skill Badge</div>
+      <div class="badge-issuer">Google Cloud</div>
+      <div class="badge-date">Issued Apr 26, 2025</div>
+      <div class="badge-verify">Verify on Credly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a class="badge-card" href="https://www.credly.com/badges/6799d913-ebca-47e6-84ac-09d547f92342/public_url" target="_blank" rel="noopener">
+      <div class="badge-icon">
+        <svg width="36" height="36" viewBox="0 0 100 100"><path fill="#EA4335" d="M17.23,27.06 A40,40 0 0 1 75.71,19.36 L64.78,32.38 A23,23 0 0 0 31.16,36.81 Z"/><path fill="#4285F4" d="M75.71,19.36 A40,40 0 0 1 51.40,89.98 L50.80,72.99 A23,23 0 0 0 64.78,32.38 Z"/><path fill="#34A853" d="M51.40,89.98 A40,40 0 0 1 35.02,87.09 L41.38,71.33 A23,23 0 0 0 50.80,72.99 Z"/><path fill="#FBBC05" d="M35.02,87.09 A40,40 0 0 1 17.23,27.06 L31.16,36.81 A23,23 0 0 0 41.38,71.33 Z"/><circle cx="27" cy="34" r="7" fill="#fff"/><circle cx="32" cy="50" r="15" fill="#fff"/><circle cx="50" cy="40" r="18" fill="#fff"/><circle cx="68" cy="50" r="15" fill="#fff"/><rect x="22" y="50" width="56" height="26" rx="13" fill="#fff"/></svg>
+      </div>
+      <div class="badge-title">Explore Generative AI with the Vertex AI Gemini API Skill Badge</div>
+      <div class="badge-issuer">Google Cloud</div>
+      <div class="badge-date">Issued Apr 26, 2025</div>
+      <div class="badge-verify">Verify on Credly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a class="badge-card" href="https://www.credly.com/badges/7fb6819f-4263-45a7-ae27-afeaa5ee9ee5/public_url" target="_blank" rel="noopener">
+      <div class="badge-icon">
+        <svg width="36" height="36" viewBox="0 0 100 100"><path fill="#EA4335" d="M17.23,27.06 A40,40 0 0 1 75.71,19.36 L64.78,32.38 A23,23 0 0 0 31.16,36.81 Z"/><path fill="#4285F4" d="M75.71,19.36 A40,40 0 0 1 51.40,89.98 L50.80,72.99 A23,23 0 0 0 64.78,32.38 Z"/><path fill="#34A853" d="M51.40,89.98 A40,40 0 0 1 35.02,87.09 L41.38,71.33 A23,23 0 0 0 50.80,72.99 Z"/><path fill="#FBBC05" d="M35.02,87.09 A40,40 0 0 1 17.23,27.06 L31.16,36.81 A23,23 0 0 0 41.38,71.33 Z"/><circle cx="27" cy="34" r="7" fill="#fff"/><circle cx="32" cy="50" r="15" fill="#fff"/><circle cx="50" cy="40" r="18" fill="#fff"/><circle cx="68" cy="50" r="15" fill="#fff"/><rect x="22" y="50" width="56" height="26" rx="13" fill="#fff"/></svg>
+      </div>
+      <div class="badge-title">Inspect Rich Documents with Gemini Multimodality and Multimodal RAG</div>
+      <div class="badge-issuer">Google Cloud</div>
+      <div class="badge-date">Issued Apr 26, 2025</div>
+      <div class="badge-verify">Verify on Credly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a class="badge-card" href="https://www.credly.com/badges/82e2c20d-12eb-44a8-8043-4653e604b629/public_url" target="_blank" rel="noopener">
+      <div class="badge-icon">
+        <svg width="36" height="36" viewBox="0 0 100 100"><path fill="#EA4335" d="M17.23,27.06 A40,40 0 0 1 75.71,19.36 L64.78,32.38 A23,23 0 0 0 31.16,36.81 Z"/><path fill="#4285F4" d="M75.71,19.36 A40,40 0 0 1 51.40,89.98 L50.80,72.99 A23,23 0 0 0 64.78,32.38 Z"/><path fill="#34A853" d="M51.40,89.98 A40,40 0 0 1 35.02,87.09 L41.38,71.33 A23,23 0 0 0 50.80,72.99 Z"/><path fill="#FBBC05" d="M35.02,87.09 A40,40 0 0 1 17.23,27.06 L31.16,36.81 A23,23 0 0 0 41.38,71.33 Z"/><circle cx="27" cy="34" r="7" fill="#fff"/><circle cx="32" cy="50" r="15" fill="#fff"/><circle cx="50" cy="40" r="18" fill="#fff"/><circle cx="68" cy="50" r="15" fill="#fff"/><rect x="22" y="50" width="56" height="26" rx="13" fill="#fff"/></svg>
+      </div>
+      <div class="badge-title">Build Real World AI Applications with Gemini and Imagen Skill Badge</div>
+      <div class="badge-issuer">Google Cloud</div>
+      <div class="badge-date">Issued Apr 18, 2025</div>
+      <div class="badge-verify">Verify on Credly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a class="badge-card" href="https://www.credly.com/badges/c472e470-287b-45a0-ae53-e353ac368a35/public_url" target="_blank" rel="noopener">
+      <div class="badge-icon">
+        <svg width="36" height="36" viewBox="0 0 100 100"><path fill="#EA4335" d="M17.23,27.06 A40,40 0 0 1 75.71,19.36 L64.78,32.38 A23,23 0 0 0 31.16,36.81 Z"/><path fill="#4285F4" d="M75.71,19.36 A40,40 0 0 1 51.40,89.98 L50.80,72.99 A23,23 0 0 0 64.78,32.38 Z"/><path fill="#34A853" d="M51.40,89.98 A40,40 0 0 1 35.02,87.09 L41.38,71.33 A23,23 0 0 0 50.80,72.99 Z"/><path fill="#FBBC05" d="M35.02,87.09 A40,40 0 0 1 17.23,27.06 L31.16,36.81 A23,23 0 0 0 41.38,71.33 Z"/><circle cx="27" cy="34" r="7" fill="#fff"/><circle cx="32" cy="50" r="15" fill="#fff"/><circle cx="50" cy="40" r="18" fill="#fff"/><circle cx="68" cy="50" r="15" fill="#fff"/><rect x="22" y="50" width="56" height="26" rx="13" fill="#fff"/></svg>
+      </div>
+      <div class="badge-title">Prompt Design in Vertex AI Skill Badge</div>
+      <div class="badge-issuer">Google Cloud</div>
+      <div class="badge-date">Issued Apr 18, 2025</div>
+      <div class="badge-verify">Verify on Credly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+  </div>
 </section>
 
 <!-- PROJECTS -->
